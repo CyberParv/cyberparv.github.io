@@ -1,37 +1,81 @@
 
 import { useState } from 'react';
-import { Shield, Network, Code, Brain, ExternalLink } from 'lucide-react';
+import { Shield, Network, Code, Brain, Database, Terminal, Lock, Globe } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const SkillsSection = () => {
   const skills = [
     {
-      category: 'Cybersecurity',
+      name: 'Network Security',
       icon: Shield,
-      progress: 90,
-      skills: ['Network Security', 'Threat Analysis', 'Penetration Testing', 'Security Auditing'],
-      certificateUrl: 'https://example.com/cybersecurity-cert'
+      progress: 92,
+      category: 'Cybersecurity'
     },
     {
-      category: 'Computer Networking',
-      icon: Network,
-      progress: 85,
-      skills: ['TCP/IP', 'Network Architecture', 'Routing & Switching', 'Network Monitoring'],
-      certificateUrl: 'https://example.com/networking-cert'
-    },
-    {
-      category: 'Web Development',
-      icon: Code,
+      name: 'Penetration Testing',
+      icon: Lock,
       progress: 88,
-      skills: ['React', 'Node.js', 'TypeScript', 'Full-Stack Development'],
-      certificateUrl: 'https://example.com/webdev-cert'
+      category: 'Cybersecurity'
     },
     {
-      category: 'AI/ML',
+      name: 'TCP/IP Protocols',
+      icon: Network,
+      progress: 90,
+      category: 'Networking'
+    },
+    {
+      name: 'React Development',
+      icon: Code,
+      progress: 85,
+      category: 'Web Development'
+    },
+    {
+      name: 'Node.js',
+      icon: Terminal,
+      progress: 82,
+      category: 'Web Development'
+    },
+    {
+      name: 'Python',
+      icon: Code,
+      progress: 87,
+      category: 'Programming'
+    },
+    {
+      name: 'Machine Learning',
       icon: Brain,
-      progress: 75,
-      skills: ['Machine Learning', 'Deep Learning', 'Python', 'Data Analysis'],
-      certificateUrl: 'https://example.com/ai-cert'
+      progress: 78,
+      category: 'AI/ML'
+    },
+    {
+      name: 'Database Security',
+      icon: Database,
+      progress: 84,
+      category: 'Cybersecurity'
+    },
+    {
+      name: 'Cloud Security',
+      icon: Globe,
+      progress: 80,
+      category: 'Cybersecurity'
+    },
+    {
+      name: 'TypeScript',
+      icon: Code,
+      progress: 83,
+      category: 'Programming'
+    },
+    {
+      name: 'Network Monitoring',
+      icon: Network,
+      progress: 86,
+      category: 'Networking'
+    },
+    {
+      name: 'Threat Analysis',
+      icon: Shield,
+      progress: 89,
+      category: 'Cybersecurity'
     }
   ];
 
@@ -45,30 +89,33 @@ const SkillsSection = () => {
             Core <span className="text-primary neon-text">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Expertise across cybersecurity, networking, and modern development
+            Individual expertise across cybersecurity, networking, and development
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skills.map((skill, index) => {
             const IconComponent = skill.icon;
             return (
               <div
-                key={skill.category}
+                key={skill.name}
                 className={`group relative p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer ${
                   hoveredSkill === index ? 'neon-glow' : ''
                 }`}
                 onMouseEnter={() => setHoveredSkill(index)}
                 onMouseLeave={() => setHoveredSkill(null)}
-                onClick={() => window.open(skill.certificateUrl, '_blank')}
               >
                 <div className="text-center space-y-4">
                   <div className="relative">
-                    <IconComponent className="w-12 h-12 text-primary mx-auto animate-float" />
-                    <ExternalLink className="w-4 h-4 absolute -top-2 -right-2 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <IconComponent className="w-10 h-10 text-primary mx-auto animate-float" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold">{skill.category}</h3>
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-semibold">{skill.name}</h3>
+                    <span className="text-xs text-muted-foreground bg-primary/10 px-2 py-1 rounded-full">
+                      {skill.category}
+                    </span>
+                  </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
@@ -76,14 +123,6 @@ const SkillsSection = () => {
                       <span className="text-primary">{skill.progress}%</span>
                     </div>
                     <Progress value={skill.progress} className="h-2" />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    {skill.skills.map((s, i) => (
-                      <div key={i} className="text-sm text-muted-foreground">
-                        • {s}
-                      </div>
-                    ))}
                   </div>
                 </div>
                 

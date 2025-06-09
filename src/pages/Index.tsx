@@ -14,19 +14,19 @@ const Index = () => {
       
       <HeroSection />
       
-      <SectionTransition />
+      <SectionTransition type="shield" />
       
       <SkillsSection />
       
-      <SectionTransition />
+      <SectionTransition type="lock" />
       
       <ProjectsSection />
       
-      <SectionTransition />
+      <SectionTransition type="network" />
       
       <CyberSnippetsSection />
       
-      <SectionTransition />
+      <SectionTransition type="brain" />
       
       <ContactSection />
     </div>
