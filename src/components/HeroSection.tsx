@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download } from 'lucide-react';
-import CyberShield from './CyberShield';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
@@ -64,9 +64,30 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Right side - Animated cyber elements */}
+          {/* Right side - Profile photo and animated elements */}
           <div className="relative flex items-center justify-center">
-            <CyberShield />
+            <div className="relative w-80 h-80 flex items-center justify-center">
+              {/* Rotating dotted orbit */}
+              <div className="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute inset-4 border border-dashed border-secondary/20 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '15s' }}></div>
+              
+              {/* Glowing background */}
+              <div className="absolute inset-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse blur-xl"></div>
+              
+              {/* Profile photo */}
+              <div className="relative z-10 w-48 h-48 bg-card rounded-full flex items-center justify-center border-2 border-primary/50 neon-glow animate-float">
+                <Avatar className="w-40 h-40">
+                  <AvatarImage src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Parv" />
+                  <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary/20 to-secondary/20">P</AvatarFallback>
+                </Avatar>
+              </div>
+              
+              {/* Floating particles */}
+              <div className="absolute top-10 left-10 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
+              <div className="absolute top-20 right-12 w-1 h-1 bg-secondary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute bottom-16 left-16 w-1.5 h-1.5 bg-accent rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute bottom-10 right-10 w-1 h-1 bg-primary rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+            </div>
           </div>
         </div>
       </div>

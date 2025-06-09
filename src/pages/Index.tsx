@@ -20,7 +20,9 @@ const Index = () => {
       
       <SectionTransition type="lock" />
       
-      <ProjectsSection />
+      <div id="projects">
+        <ProjectsSection />
+      </div>
       
       <SectionTransition type="network" />
       
