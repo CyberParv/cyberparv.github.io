@@ -66,27 +66,40 @@ const HeroSection = () => {
           
           {/* Right side - Profile photo and animated elements */}
           <div className="relative flex items-center justify-center">
-            <div className="relative w-80 h-80 flex items-center justify-center">
-              {/* Rotating dotted orbit */}
-              <div className="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-              <div className="absolute inset-4 border border-dashed border-secondary/20 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '15s' }}></div>
+            <div className="relative w-96 h-96 flex items-center justify-center">
+              {/* Animated outer glow ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-blue-600/20 animate-pulse blur-2xl"></div>
               
-              {/* Glowing background */}
-              <div className="absolute inset-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse blur-xl"></div>
+              {/* Rotating orbital rings */}
+              <div className="absolute inset-8 border-2 border-dashed border-primary/30 rounded-full animate-spin" style={{ animationDuration: '25s' }}></div>
+              <div className="absolute inset-12 border border-dashed border-blue-400/20 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '20s' }}></div>
               
-              {/* Profile photo */}
-              <div className="relative z-10 w-48 h-48 bg-card rounded-full flex items-center justify-center border-2 border-primary/50 neon-glow animate-float">
-                <Avatar className="w-40 h-40">
-                  <AvatarImage src="/lovable-uploads/05c4695a-6d9d-43c1-a7ab-245421cfe485.png" alt="Parv" />
-                  <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary/20 to-secondary/20">P</AvatarFallback>
-                </Avatar>
+              {/* Soft neon ring behind image */}
+              <div className="absolute inset-16 bg-gradient-to-r from-blue-400/30 via-cyan-300/30 to-blue-500/30 rounded-full animate-pulse blur-lg"></div>
+              
+              {/* Profile photo container with hover effects */}
+              <div className="relative z-10 w-64 h-64 rounded-full flex items-center justify-center border-2 border-blue-400/50 neon-glow animate-float hover:scale-105 transition-all duration-300 ease-out group">
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/10 to-cyan-300/10 group-hover:from-blue-400/20 group-hover:to-cyan-300/20 transition-all duration-300"></div>
+                
+                {/* Image container */}
+                <div className="relative w-56 h-56 rounded-full overflow-hidden bg-gradient-to-br from-card to-card/90">
+                  <img 
+                    src="/lovable-uploads/ab46c05d-3bf9-492c-a88d-0078e4e08820.png" 
+                    alt="Parv" 
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Subtle overlay for better integration */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-blue-500/5 rounded-full"></div>
+                </div>
               </div>
               
-              {/* Floating particles */}
-              <div className="absolute top-10 left-10 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
-              <div className="absolute top-20 right-12 w-1 h-1 bg-secondary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute bottom-16 left-16 w-1.5 h-1.5 bg-accent rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-              <div className="absolute bottom-10 right-10 w-1 h-1 bg-primary rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+              {/* Orbiting particles */}
+              <div className="absolute top-12 left-12 w-3 h-3 bg-blue-400 rounded-full animate-float opacity-70" style={{ animationDelay: '0s', animationDuration: '4s' }}></div>
+              <div className="absolute top-20 right-16 w-2 h-2 bg-cyan-300 rounded-full animate-float opacity-60" style={{ animationDelay: '1s', animationDuration: '3.5s' }}></div>
+              <div className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-blue-500 rounded-full animate-float opacity-50" style={{ animationDelay: '2s', animationDuration: '4.5s' }}></div>
+              <div className="absolute bottom-16 right-12 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-65" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>
+              <div className="absolute top-32 right-32 w-1.5 h-1.5 bg-blue-300 rounded-full animate-float opacity-40" style={{ animationDelay: '1.5s', animationDuration: '5s' }}></div>
             </div>
           </div>
         </div>
