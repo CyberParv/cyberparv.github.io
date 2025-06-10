@@ -25,7 +25,7 @@ const HeroSection = () => {
               <h1 className="text-5xl lg:text-6xl font-bold">
                 Hi, I'm <span className="text-primary">Parv</span> 👋
               </h1>
-              <h2 className="text-2xl lg:text-3xl text-secondary font-semibold">
+              <h2 className="text-2xl lg:text-3xl text-foreground font-semibold">
                 Securing networks, decoding threats, and building what's next.
               </h2>
             </div>

@@ -40,8 +40,6 @@ const SkillsSection = () => {
     ]
   ];
 
-  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
-
   return (
     <section id="skills" className="py-20 px-6 overflow-hidden">
       <div className="container mx-auto">
@@ -59,14 +57,10 @@ const SkillsSection = () => {
             <div
               key={rowIndex}
               className={`flex whitespace-nowrap ${
-                hoveredRow === rowIndex 
-                  ? '' 
-                  : rowIndex % 2 === 0 
-                    ? 'animate-scroll-right' 
-                    : 'animate-scroll-left'
+                rowIndex % 2 === 0 
+                  ? 'animate-scroll-right' 
+                  : 'animate-scroll-left'
               }`}
-              onMouseEnter={() => setHoveredRow(rowIndex)}
-              onMouseLeave={() => setHoveredRow(null)}
             >
               {/* Duplicate the skills to create seamless loop */}
               {[...skillRow, ...skillRow, ...skillRow].map((skill, index) => (

@@ -46,7 +46,7 @@ const CyberSnippetsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Cyber<span className="text-primary neon-text">Snippets</span>
+            Cyber<span className="text-primary">Snippets</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Quick cybersecurity insights and best practices

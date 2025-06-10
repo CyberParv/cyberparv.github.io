@@ -87,7 +87,7 @@ const ContactSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Get In <span className="text-primary neon-text">Touch</span>
+            Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Let's connect and discuss cybersecurity, technology, or potential collaborations

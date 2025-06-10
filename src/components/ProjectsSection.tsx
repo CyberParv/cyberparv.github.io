@@ -43,7 +43,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Featured <span className="text-primary neon-text">Projects</span>
+            Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Cybersecurity tools and applications I've built
