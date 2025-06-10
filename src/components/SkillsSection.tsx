@@ -4,21 +4,50 @@ import { useEffect, useState } from 'react';
 const SkillsSection = () => {
   const skills = [
     // First row (moving right)
-    ['Network Security', 'Penetration Testing', 'Threat Analysis', 'Incident Response', 'Vulnerability Assessment'],
+    [
+      { name: 'Network Security', url: 'https://example.com/network-security' },
+      { name: 'Penetration Testing', url: 'https://example.com/penetration-testing' },
+      { name: 'Threat Analysis', url: 'https://example.com/threat-analysis' },
+      { name: 'Incident Response', url: 'https://example.com/incident-response' },
+      { name: 'Vulnerability Assessment', url: 'https://example.com/vulnerability-assessment' }
+    ],
     // Second row (moving left)
-    ['React', 'Node.js', 'Python', 'TypeScript', 'JavaScript', 'MongoDB'],
+    [
+      { name: 'React', url: 'https://reactjs.org' },
+      { name: 'Node.js', url: 'https://nodejs.org' },
+      { name: 'Python', url: 'https://python.org' },
+      { name: 'TypeScript', url: 'https://typescriptlang.org' },
+      { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+      { name: 'MongoDB', url: 'https://mongodb.com' }
+    ],
     // Third row (moving right)
-    ['TCP/IP', 'Wireshark', 'Nmap', 'Metasploit', 'Burp Suite', 'OWASP'],
+    [
+      { name: 'TCP/IP', url: 'https://example.com/tcp-ip' },
+      { name: 'Wireshark', url: 'https://wireshark.org' },
+      { name: 'Nmap', url: 'https://nmap.org' },
+      { name: 'Metasploit', url: 'https://metasploit.com' },
+      { name: 'Burp Suite', url: 'https://portswigger.net/burp' },
+      { name: 'OWASP', url: 'https://owasp.org' }
+    ],
     // Fourth row (moving left)
-    ['AWS Security', 'Docker', 'Kubernetes', 'CI/CD', 'Git', 'Linux Administration']
+    [
+      { name: 'AWS Security', url: 'https://aws.amazon.com/security' },
+      { name: 'Docker', url: 'https://docker.com' },
+      { name: 'Kubernetes', url: 'https://kubernetes.io' },
+      { name: 'CI/CD', url: 'https://example.com/ci-cd' },
+      { name: 'Git', url: 'https://git-scm.com' },
+      { name: 'Linux Administration', url: 'https://example.com/linux' }
+    ]
   ];
 
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
+
   return (
-    <section className="py-20 px-6 overflow-hidden">
+    <section id="skills" className="py-20 px-6 overflow-hidden">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Core <span className="text-primary neon-text">Skills</span>
+            Core <span className="text-primary">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Technologies and expertise I work with
@@ -30,17 +59,26 @@ const SkillsSection = () => {
             <div
               key={rowIndex}
               className={`flex whitespace-nowrap ${
-                rowIndex % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left'
+                hoveredRow === rowIndex 
+                  ? '' 
+                  : rowIndex % 2 === 0 
+                    ? 'animate-scroll-right' 
+                    : 'animate-scroll-left'
               }`}
+              onMouseEnter={() => setHoveredRow(rowIndex)}
+              onMouseLeave={() => setHoveredRow(null)}
             >
               {/* Duplicate the skills to create seamless loop */}
               {[...skillRow, ...skillRow, ...skillRow].map((skill, index) => (
-                <div
+                <a
                   key={`${rowIndex}-${index}`}
-                  className="inline-flex items-center justify-center mx-4 px-6 py-3 bg-card border border-primary/20 rounded-full text-lg font-medium whitespace-nowrap hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                  href={skill.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center mx-4 px-6 py-3 bg-card border border-primary/20 rounded-full text-lg font-medium whitespace-nowrap hover:border-primary/50 hover:shadow-lg hover:bg-primary/5 transition-all duration-300 cursor-pointer"
                 >
-                  {skill}
-                </div>
+                  {skill.name}
+                </a>
               ))}
             </div>
           ))}

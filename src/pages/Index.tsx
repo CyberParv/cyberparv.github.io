@@ -6,11 +6,13 @@ import CyberSnippetsSection from '@/components/CyberSnippetsSection';
 import ContactSection from '@/components/ContactSection';
 import SectionTransition from '@/components/SectionTransition';
 import ParticleBackground from '@/components/ParticleBackground';
+import Navbar from '@/components/Navbar';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ParticleBackground />
+      <Navbar />
       
       <HeroSection />
       
@@ -26,11 +28,15 @@ const Index = () => {
       
       <SectionTransition type="network" />
       
-      <CyberSnippetsSection />
+      <div id="snippets">
+        <CyberSnippetsSection />
+      </div>
       
       <SectionTransition type="brain" />
       
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
     </div>
   );
 };

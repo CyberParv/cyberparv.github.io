@@ -16,14 +16,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-6">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold">
-                Hi, I'm <span className="text-primary neon-text">Parv</span> 👋
+                Hi, I'm <span className="text-primary">Parv</span> 👋
               </h1>
               <h2 className="text-2xl lg:text-3xl text-secondary font-semibold">
                 Securing networks, decoding threats, and building what's next.
