@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { sendContactEmail } from '@/utils/emailService';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -44,15 +45,31 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const result = await sendContactEmail(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: result.error || "Please try again later.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive"
       });
-      setFormData({ name: '', email: '', message: '' });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [

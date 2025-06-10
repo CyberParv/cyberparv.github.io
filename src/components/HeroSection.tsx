@@ -77,7 +77,7 @@ const HeroSection = () => {
               {/* Profile photo */}
               <div className="relative z-10 w-48 h-48 bg-card rounded-full flex items-center justify-center border-2 border-primary/50 neon-glow animate-float">
                 <Avatar className="w-40 h-40">
-                  <AvatarImage src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Parv" />
+                  <AvatarImage src="/lovable-uploads/05c4695a-6d9d-43c1-a7ab-245421cfe485.png" alt="Parv" />
                   <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary/20 to-secondary/20">P</AvatarFallback>
                 </Avatar>
               </div>
