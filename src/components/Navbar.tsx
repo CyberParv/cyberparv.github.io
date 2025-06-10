@@ -26,8 +26,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Desktop Navigation - Right aligned */}
-          <div className="hidden md:flex items-center space-x-8 ml-auto">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8 mx-auto">
             {navItems.map((item) => (
               <button
                 key={item.id}

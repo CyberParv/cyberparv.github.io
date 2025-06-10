@@ -66,40 +66,27 @@ const HeroSection = () => {
           
           {/* Right side - Profile photo and animated elements */}
           <div className="relative flex items-center justify-center">
-            <div className="relative w-96 h-96 flex items-center justify-center">
-              {/* Soft grey outer glow */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-muted/20 via-muted/30 to-muted/20 animate-pulse blur-2xl" style={{ animationDuration: '4s' }}></div>
+            <div className="relative w-80 h-80 flex items-center justify-center">
+              {/* Rotating dotted orbit */}
+              <div className="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute inset-4 border border-dashed border-secondary/20 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '15s' }}></div>
               
-              {/* Rotating orbital rings - much slower */}
-              <div className="absolute inset-8 border-2 border-dashed border-muted/20 rounded-full animate-spin" style={{ animationDuration: '40s' }}></div>
-              <div className="absolute inset-12 border border-dashed border-muted/15 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '35s' }}></div>
+              {/* Glowing background */}
+              <div className="absolute inset-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse blur-xl"></div>
               
-              {/* Soft grey ring behind image */}
-              <div className="absolute inset-16 bg-gradient-to-r from-muted/15 via-muted/20 to-muted/15 rounded-full animate-pulse blur-lg" style={{ animationDuration: '5s' }}></div>
-              
-              {/* Profile photo container with subtle hover effects */}
-              <div className="relative z-10 w-64 h-64 rounded-full flex items-center justify-center border-2 border-muted/30 neon-glow animate-gentle-float hover:scale-105 transition-all duration-300 ease-out group">
-                {/* Inner glow effect */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-muted/5 to-muted/10 group-hover:from-muted/10 group-hover:to-muted/15 transition-all duration-300"></div>
-                
-                {/* Image container */}
-                <div className="relative w-56 h-56 rounded-full overflow-hidden bg-gradient-to-br from-card to-card/90">
-                  <img 
-                    src="/lovable-uploads/ab46c05d-3bf9-492c-a88d-0078e4e08820.png" 
-                    alt="Parv" 
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                  />
-                  {/* Subtle overlay for better integration */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-muted/5 rounded-full"></div>
-                </div>
+              {/* Profile photo */}
+              <div className="relative z-10 w-48 h-48 bg-card rounded-full flex items-center justify-center border-2 border-primary/50 neon-glow animate-float">
+                <Avatar className="w-40 h-40">
+                  <AvatarImage src="/lovable-uploads/05c4695a-6d9d-43c1-a7ab-245421cfe485.png" alt="Parv" />
+                  <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary/20 to-secondary/20">P</AvatarFallback>
+                </Avatar>
               </div>
               
-              {/* Slow floating particles */}
-              <div className="absolute top-12 left-12 w-3 h-3 bg-muted rounded-full animate-gentle-float opacity-40" style={{ animationDelay: '0s', animationDuration: '8s' }}></div>
-              <div className="absolute top-20 right-16 w-2 h-2 bg-muted/70 rounded-full animate-gentle-float opacity-30" style={{ animationDelay: '2s', animationDuration: '7s' }}></div>
-              <div className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-muted/80 rounded-full animate-gentle-float opacity-35" style={{ animationDelay: '4s', animationDuration: '9s' }}></div>
-              <div className="absolute bottom-16 right-12 w-2 h-2 bg-muted/60 rounded-full animate-gentle-float opacity-25" style={{ animationDelay: '1s', animationDuration: '6s' }}></div>
-              <div className="absolute top-32 right-32 w-1.5 h-1.5 bg-muted/50 rounded-full animate-gentle-float opacity-20" style={{ animationDelay: '3s', animationDuration: '10s' }}></div>
+              {/* Floating particles */}
+              <div className="absolute top-10 left-10 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
+              <div className="absolute top-20 right-12 w-1 h-1 bg-secondary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute bottom-16 left-16 w-1.5 h-1.5 bg-accent rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute bottom-10 right-10 w-1 h-1 bg-primary rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
             </div>
           </div>
         </div>
