@@ -1,5 +1,5 @@
-
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -106,7 +106,7 @@ export default {
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
+					'50%': { transform: 'translateY(-1px)' }
 				},
 				'pulse-glow': {
 					'0%, 100%': { opacity: '1' },
@@ -123,11 +123,11 @@ export default {
 				'scroll-right': 'scroll-right 20s linear infinite',
 				'scroll-left': 'scroll-left 20s linear infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'float': 'float 3s ease-in-out infinite',
+				'float': 'float 60s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'rotate': 'rotate 20s linear infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;

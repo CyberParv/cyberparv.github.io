@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -76,26 +75,26 @@ const ContactSection = () => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/parvjain',
-      href: 'https://github.com/parvjain'
+      value: 'github.com/ParvJain882',
+      href: 'https://github.com/ParvJain882'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/parvjain',
-      href: 'https://linkedin.com/in/parvjain'
+      value: 'linkedin.com/in/parv-jain-7071392b3',
+      href: 'https://www.linkedin.com/in/parv-jain-7071392b3/'
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'parv@example.com',
-      href: 'mailto:parv@example.com'
+      value: 'parvjain.muj@gmail.com',
+      href: 'mailto:parvjain.muj@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 8826038451',
+      href: 'tel:+918826038451'
     }
   ];
 

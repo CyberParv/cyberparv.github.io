@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -113,6 +112,8 @@
   }
 
   .neon-glow {
-    box-shadow: 0 0 5px hsl(var(--primary) / 0.5), 0 0 10px hsl(var(--primary) / 0.3), 0 0 15px hsl(var(--primary) / 0.2);
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.3), 
+                0 0 10px hsl(var(--primary) / 0.2), 
+                0 0 15px hsl(var(--primary) / 0.1);
   }
 }
