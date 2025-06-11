@@ -1,10 +1,10 @@
-export const sendContactEmail = async (formData: {
+export const sendEmail = async (formData: {
   name: string;
   email: string;
   message: string;
 }) => {
   try {
-    const response = await fetch('/api/sendEmail', {
+    const response = await fetch('https://parv-jain-cyber-verse-aotfke5ak-parv-jains-projects-108c4534.vercel.app/api/sendEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -12,15 +12,14 @@ export const sendContactEmail = async (formData: {
       body: JSON.stringify(formData),
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
-      throw new Error(data.error || 'Failed to send email');
+      const error = await response.json();
+      throw new Error(error.message || 'Failed to send email');
     }
 
-    return { success: true, data };
+    return await response.json();
   } catch (error) {
     console.error('Error sending email:', error);
-    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+    throw error;
   }
 };
