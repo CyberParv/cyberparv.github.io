@@ -4,7 +4,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
-    window.open('/resume.pdf', '_blank');
+    window.open('/public/resume.pdf', '_blank');
   };
 
   const scrollToProjects = () => {
@@ -53,9 +53,8 @@ const HeroSection = () => {
               </Button>
               <Button
                 onClick={scrollToProjects}
-                variant="outline"
                 size="lg"
-                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                className="bg-secondary text-secondary-foreground border-secondary"
               >
                 Explore Projects
                 <ArrowDown className="h-5 w-5 ml-2" />

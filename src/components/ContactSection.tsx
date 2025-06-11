@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { sendContactEmail } from '@/utils/emailService';
+import { sendEmail } from '@/utils/emailService';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const result = await sendContactEmail(formData);
+      const result = await sendEmail(formData);
       
       if (result.success) {
         toast({

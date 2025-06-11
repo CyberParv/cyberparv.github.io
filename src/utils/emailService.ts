@@ -4,7 +4,7 @@ export const sendEmail = async (formData: {
   message: string;
 }) => {
   try {
-    const response = await fetch('https://parv-jain-cyber-verse-aotfke5ak-parv-jains-projects-108c4534.vercel.app/api/sendEmail', {
+    const response = await fetch('https://parv-jain-cyber-verse.vercel.app/api/sendEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
