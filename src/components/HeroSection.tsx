@@ -4,7 +4,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
-    window.open('/public/resume.pdf', '_blank');
+    window.open('https://drive.google.com/file/d/1xviqJmaic7tYGCFONzLvxRc7MoCttBKT/view?usp=sharing', '_blank');
   };
 
   const scrollToProjects = () => {

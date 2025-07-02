@@ -13,12 +13,15 @@ const SkillsSection = () => {
     ],
     // Second row (moving left)
     [
+      { name: 'HTML', url: 'https://reactjs.org' },
+      { name: 'CSS', url: 'https://reactjs.org' },
+      { name: 'JavaScript', url: 'https://reactjs.org' },
       { name: 'React', url: 'https://reactjs.org' },
       { name: 'Node.js', url: 'https://nodejs.org' },
-      { name: 'Python', url: 'https://python.org' },
+      { name: 'Express.js', url: 'https://reactjs.org' },
       { name: 'TypeScript', url: 'https://typescriptlang.org' },
-      { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-      { name: 'MongoDB', url: 'https://mongodb.com' }
+      { name: 'MongoDB', url: 'https://mongodb.com' },
+      { name: 'SQL', url: 'https://reactjs.org' },
     ],
     // Third row (moving right)
     [
