@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     {
       title: 'SecurGeek',
       description: 'A comprehensive cybersecurity learning platform with interactive video courses, real-time assessments, and admin dashboard, built using React, Supabase, Tailwind CSS, JavaScript, and cybersecurity education principles.',
-      image: '/placeholder.svg',
+      image: '/Images/securgeek.png',
       liveUrl: 'https://securgeek.vercel.app/',
       sourceUrl: 'https://github.com/CyberParv/SecurGeek_v2',
       tags: ['React', 'Supabase', 'Tailwind CSS', 'JavaScript', 'Cybersecurity Training', 'Full-Stack Development']
@@ -14,7 +14,7 @@ const ProjectsSection = () => {
     {
       title: 'Vulnerability Scanner',
       description: 'Automated vulnerability assessment tool for web applications with detailed reporting.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=450&fit=crop&crop=center',
       liveUrl: 'https://example.com/project2',
       sourceUrl: 'https://github.com/example/project2',
       tags: ['Node.js', 'Security', 'Automation', 'Testing']
@@ -22,7 +22,7 @@ const ProjectsSection = () => {
     {
       title: 'Crypto Portfolio Tracker',
       description: 'Secure cryptocurrency portfolio management with advanced analytics and alerts.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=450&fit=crop&crop=center',
       liveUrl: 'https://example.com/project3',
       sourceUrl: 'https://github.com/example/project3',
       tags: ['React', 'TypeScript', 'Blockchain', 'Security']
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
     {
       title: 'AI Threat Classifier',
       description: 'Machine learning model to classify and predict cybersecurity threats in real-time.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop&crop=center',
       liveUrl: 'https://example.com/project4',
       sourceUrl: 'https://github.com/example/project4',
       tags: ['Python', 'TensorFlow', 'AI/ML', 'Cybersecurity']
