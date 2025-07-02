@@ -1,16 +1,15 @@
-
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Network Security Monitor',
-      description: 'Real-time network traffic analysis and threat detection system built with Python and React.',
+      title: 'SecurGeek',
+      description: 'A comprehensive cybersecurity learning platform with interactive video courses, real-time assessments, and admin dashboard, built using React, Supabase, Tailwind CSS, JavaScript, and cybersecurity education principles.',
       image: '/placeholder.svg',
-      liveUrl: 'https://example.com/project1',
-      sourceUrl: 'https://github.com/example/project1',
-      tags: ['Python', 'React', 'Cybersecurity', 'Machine Learning']
+      liveUrl: 'https://securgeek.vercel.app/',
+      sourceUrl: 'https://github.com/CyberParv/SecurGeek_v2',
+      tags: ['React', 'Supabase', 'Tailwind CSS', 'JavaScript', 'Cybersecurity Training', 'Full-Stack Development']
     },
     {
       title: 'Vulnerability Scanner',
@@ -95,7 +94,7 @@ const ProjectsSection = () => {
                   <Button
                     onClick={() => window.open(project.sourceUrl, '_blank')}
                     variant="outline"
-                    className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                    className="border-border text-foreground hover:bg-muted hover:text-foreground bg-muted/50"
                   >
                     <Github className="h-4 w-4 mr-2" />
                     Source Code
