@@ -75,8 +75,8 @@ const ContactSection = () => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/ParvJain882',
-      href: 'https://github.com/ParvJain882'
+      value: 'github.com/CyberParv',
+      href: 'https://github.com/CyberParv'
     },
     {
       icon: Linkedin,

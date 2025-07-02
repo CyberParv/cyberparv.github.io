@@ -20,7 +20,7 @@ I'm a cybersecurity professional passionate about building safer digital spaces 
 
 ## 🌐 Connect With Me
 - [LinkedIn](https://www.linkedin.com/in/parv-jain-7071392b3/)
-- [GitHub](https://github.com/ParvJain882)
+- [GitHub](https://github.com/CyberParv)
 - Email: parvjain.muj@gmail.com
 - Phone: +91 8826038451
 
